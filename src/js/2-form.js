@@ -26,7 +26,6 @@ form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();
-    localStorage.removeItem(STORAGE_KEY);
     
     if (!form.elements.message.value || !form.elements.email.value) {
         return alert('All form fields must be filled in');
@@ -38,6 +37,7 @@ function handleSubmit(event) {
     });
 
     form.reset();
+    localStorage.removeItem(STORAGE_KEY);
 }
 
 
